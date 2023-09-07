@@ -10,11 +10,15 @@ public class FittingRoomManager : MonoBehaviour
     private const string ANIMATION_TRIGGER_OPEN = "Open";
     private const string ANIMATION_TRIGGER_CLOSE = "Close";
     private const string ANIMATION_TRIGGER_EXIT = "Exit";
-    private const string NEXT_SCENE_NAME = "Test";
+    private const string NEXT_SCENE_NAME = "AlHaram";
 
     private bool fitRoomEntered;
 
-
+    private void Start()
+    {
+        tutorialPlayer.playOnAwake = false;
+        tutorialPlayer.Pause();
+    }
     public void DoorClicked(int id)
     {
         if (id == 1)
