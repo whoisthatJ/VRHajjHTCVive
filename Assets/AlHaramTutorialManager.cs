@@ -11,7 +11,7 @@ public class AlHaramTutorialManager : MonoBehaviour
 
     [SerializeField] private Transform safaTrigger;
     [SerializeField] private Transform mauraTrigger;
-
+    [SerializeField] int aroundKaabaCountGoal = 8;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +33,7 @@ public class AlHaramTutorialManager : MonoBehaviour
     {
         aroundKaabaTriggers[aroundKaabaCount % 4].gameObject.SetActive(false);
         aroundKaabaCount++;
-        if (aroundKaabaCount >= 28)
+        if (aroundKaabaCount >= aroundKaabaCountGoal)
         {
             infoWindow.SetActive(true);
             arrows.PlaceObjectNearPlayer(infoWindow.transform);
